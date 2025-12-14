@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Node
+node_modules/
+dist/
+.DS_Store
+
+# Google Cloud Secrets
+service_account.json
+credentials.json
+
+# Local Dev
+.vscode/
+.idea/

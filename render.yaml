@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: image-vision-app
+    env: python
+    buildCommand: "pip install -r backend/requirements.txt && cd frontend && npm install && npm run build"
+    startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: SERPAPI_KEY
+        value: "6c455901ea849ac1984f73e4538896ed963538ec85e09159f9cc29c7bfb404a5"
